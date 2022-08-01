@@ -1,0 +1,25 @@
+<h2>Category Details</h2>
+<div class ="container">
+    <table border="1">
+        <tr>
+            <th>CategoryId</th>
+            <th>CategoryName</th>
+        </tr>
+        <tr *ngFor="let temp of  categories">
+            <td>{{temp.categoryid}}</td>
+            <td>{{temp.categoryname}}</td>
+        </tr>
+    </table>
+    &nbsp;
+    <form #categoryForm="ngForm" (ngSubmit)="onSubmit(categoryForm)">
+        <div class="form-control">
+            <label>CategoryID</label>
+            <input type="number" name="categoryid" ngModel/>
+        </div>
+        <div class="form-control">
+            <label>CategoryName</label>
+            <input type="text" name="categoryname" ngModel/>
+        </div>
+        <button type="submit" >Submit</button>
+    </form>
+</div>

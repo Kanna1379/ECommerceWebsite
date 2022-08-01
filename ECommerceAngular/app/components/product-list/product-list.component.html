@@ -1,0 +1,37 @@
+<h2>Product Details</h2>
+<div class="row" style="margin: 0 15%;">
+    <button type="button" routerLink="/productform" class="btn btn-primary">Add Product</button>
+</div>
+&nbsp;
+<table border="1">
+    <tr>
+        <th>ProductId</th>
+        <th>SKU</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Unitprice</th>
+        <th>Image</th>
+        <th>Active</th>
+        <th>Unitsinstock</th>
+        <th>DateCreated</th>
+        <th>LastUpdated</th>
+        <th>CategoryId</th>
+    </tr>
+    <tr *ngFor="let temp of  products">
+        <td>{{temp.productid}}</td>
+        <td>{{temp.sku}}</td>
+        <td>{{temp.name}}</td>
+        <td>{{temp.description}}</td>
+        <td>{{temp.unitprice}}</td>
+        <td>
+            <img src="{{temp.imageurl}}" class="img-thumbnail" alt="...">
+        </td>
+        <td>{{temp.activebit}}</td>
+        <td>{{temp.unitsinstock}}</td>
+        <td>{{temp.datecreated}}</td>
+        <td>{{temp.lastupdated}}</td>
+        <td>{{temp.categoryid}}</td>
+    </tr>
+    </table>
+
+
